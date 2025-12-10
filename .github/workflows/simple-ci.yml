@@ -32,6 +32,8 @@ jobs:
       uses: browser-actions/setup-chrome@latest
       
     - name: Run Tests
+      env:
+        CI: true
       run: mvn clean test -Dcucumber.filter.tags="@smoke"
       
     - name: Upload Test Results

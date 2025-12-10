@@ -16,6 +16,19 @@ public class DriverManager {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--disable-notifications");
+                
+                // CI/Headless mode detection
+                if (System.getenv("CI") != null || System.getProperty("headless") != null) {
+                    options.addArguments("--headless=new");
+                    options.addArguments("--no-sandbox");
+                    options.addArguments("--disable-dev-shm-usage");
+                    options.addArguments("--disable-gpu");
+                    options.addArguments("--window-size=1920,1080");
+                    options.addArguments("--disable-extensions");
+                    options.addArguments("--disable-web-security");
+                    options.addArguments("--allow-running-insecure-content");
+                }
+                
                 driver.set(new ChromeDriver(options));
                 break;
             case "firefox":
@@ -29,7 +42,10 @@ public class DriverManager {
             default:
                 throw new IllegalArgumentException("Browser not supported: " + browserName);
         }
-        getDriver().manage().window().maximize();
+        // Only maximize if not in headless mode
+        if (System.getenv("CI") == null && System.getProperty("headless") == null) {
+            getDriver().manage().window().maximize();
+        }
     }
 
     public static WebDriver getDriver() {
