@@ -1,0 +1,55 @@
+name: Scheduled Test Execution
+
+on:
+  schedule:
+    # Run tests daily at 9 AM UTC
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+    inputs:
+      test_tags:
+        description: 'Test tags to run'
+        required: false
+        default: '@smoke'
+        type: choice
+        options:
+        - '@smoke'
+        - '@regression'
+        - '@xiaomi'
+        - '@google'
+
+jobs:
+  scheduled-tests:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+        
+    - name: Install Chrome
+      uses: browser-actions/setup-chrome@latest
+      
+    - name: Run Tests
+      run: |
+        TAGS="${{ github.event.inputs.test_tags || '@smoke' }}"
+        mvn clean test -Dcucumber.filter.tags="$TAGS"
+        
+    - name: Generate Reports
+      if: always()
+      run: |
+        mvn verify
+        mvn allure:report
+        
+    - name: Upload Test Artifacts
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-reports-${{ github.run_number }}
+        path: |
+          results/
+          target/surefire-reports/
