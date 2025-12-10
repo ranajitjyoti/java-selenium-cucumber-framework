@@ -12,15 +12,15 @@ Feature: Xiaomi Ecommerce Functionality
 #    When I search on Xiaomi for "Redmi Note"
 #    Then I should see product details
 #
-#  @category @smartphones
-#  Scenario: Browse Smartphones Category
-#    Given I open Xiaomi homepage
+  @category @smartphones
+  Scenario: Browse Smartphones Category
+    Given I open Xiaomi homepage
 #    When I click on smartphones category
 #    Then I should see product details
 #
-#  @category @laptops
-#  Scenario: Browse Laptops Category
-#    Given I open Xiaomi homepage
+  @category @laptops
+  Scenario: Browse Laptops Category
+    Given I open Xiaomi homepage
 #    When I click on laptops category
 #    Then I should see product details
 #
