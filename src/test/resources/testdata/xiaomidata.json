@@ -1,0 +1,47 @@
+{
+  "products": [
+    {
+      "name": "Redmi Note 12",
+      "category": "smartphone",
+      "expectedPrice": "₹15,999"
+    },
+    {
+      "name": "Mi Laptop",
+      "category": "laptop",
+      "expectedPrice": "₹45,999"
+    },
+    {
+      "name": "Mi Band 7",
+      "category": "wearable",
+      "expectedPrice": "₹2,799"
+    }
+  ],
+  "searchTerms": [
+    {
+      "term": "Redmi Note",
+      "expectedResults": "smartphone"
+    },
+    {
+      "term": "Mi Laptop",
+      "expectedResults": "laptop"
+    },
+    {
+      "term": "Mi Band",
+      "expectedResults": "wearable"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Smartphones",
+      "url": "/smartphones"
+    },
+    {
+      "name": "Laptops",
+      "url": "/laptops"
+    },
+    {
+      "name": "Smart TV",
+      "url": "/smart-tv"
+    }
+  ]
+}

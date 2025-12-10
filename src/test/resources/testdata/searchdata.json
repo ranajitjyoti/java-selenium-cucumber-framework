@@ -1,0 +1,26 @@
+{
+  "searchTerms": [
+    {
+      "term": "Selenium WebDriver",
+      "expectedResults": "automation testing"
+    },
+    {
+      "term": "Java programming",
+      "expectedResults": "programming language"
+    },
+    {
+      "term": "Cucumber BDD",
+      "expectedResults": "behavior driven development"
+    }
+  ],
+  "invalidSearches": [
+    {
+      "term": "",
+      "expectedError": "Please enter search term"
+    },
+    {
+      "term": "xyzabc123nonexistent",
+      "expectedResults": "No results found"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+# Build and Dependencies
+target/
+build/
+*.jar
+*.war
+*.ear
+*.class
+
+# Reports and Logs
+*.log
+logs/
+test-output/
+results/
+
+# IDE Files
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### VS Code ###
+.vscode/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Maven
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Selenium
+webdriver/
+drivers/
+*.png
+*.jpg
+*.jpeg
+screenshots/
