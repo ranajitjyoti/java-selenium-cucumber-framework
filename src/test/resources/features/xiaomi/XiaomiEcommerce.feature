@@ -3,12 +3,12 @@ Feature: Xiaomi Ecommerce Functionality
 
   @smoke @homepage
   Scenario: Open Xiaomi Homepage
-#    Given I open Xiaomi homepage
+    Given I open Xiaomi homepage
 #    Then I should see Xiaomi homepage
 #
-#  @smoke @search @positive
-#  Scenario: Search for Product
-#    Given I open Xiaomi homepage
+  @smoke @search @positive
+  Scenario: Search for Product
+    Given I open Xiaomi homepage
 #    When I search on Xiaomi for "Redmi Note"
 #    Then I should see product details
 #
