@@ -20,8 +20,10 @@ public class XiaomiSteps {
     }
 
     @Then("I should see Xiaomi homepage")
-    public void i_should_see_xiaomi_homepage() {
+    public void i_should_see_xiaomi_homepage() throws InterruptedException {
+        Thread.sleep(3000);
         Assert.assertTrue(xiaomiHomePage.isHomePageLoaded());
+        Thread.sleep(3000);
         Assert.assertTrue(xiaomiHomePage.isSearchBoxDisplayed());
     }
 
