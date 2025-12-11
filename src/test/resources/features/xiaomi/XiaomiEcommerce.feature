@@ -1,10 +1,10 @@
 @xiaomi @ecommerce @regression
 Feature: Xiaomi Ecommerce Functionality
 
-  @smoke @homepage
+  @smoke @homepage @Refactor
   Scenario: Open Xiaomi Homepage
     Given I open Xiaomi homepage
-#    Then I should see Xiaomi homepage
+    Then I should see Xiaomi homepage
 #
   @smoke @search @positive
   Scenario: Search for Product

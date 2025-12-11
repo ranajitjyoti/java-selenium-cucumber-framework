@@ -7,7 +7,7 @@ import pages.BasePage;
 
 public class XiaomiHomePage extends BasePage {
 
-    @FindBy(xpath = "//input[@placeholder='Search']")
+    @FindBy(css = "[aria-label='search'][tabindex='-1']")
     private WebElement searchBox;
 
     @FindBy(xpath = "//button[@type='submit']")
@@ -22,7 +22,7 @@ public class XiaomiHomePage extends BasePage {
     @FindBy(xpath = "//div[@class='product-item']")
     private WebElement firstProduct;
 
-    @FindBy(xpath = "//span[contains(text(), 'Mi Store')]")
+    @FindBy(css = "[class='logo__home']")
     private WebElement miStoreLogo;
 
     public XiaomiHomePage(WebDriver driver) {
