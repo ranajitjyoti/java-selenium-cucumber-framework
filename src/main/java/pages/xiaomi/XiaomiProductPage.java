@@ -45,8 +45,4 @@ public class XiaomiProductPage extends BasePage {
     public boolean isProductImageDisplayed() {
         return productImage.isDisplayed();
     }
-
-    public boolean isAddToCartButtonDisplayed() {
-        return addToCartButton.isDisplayed();
-    }
 }
