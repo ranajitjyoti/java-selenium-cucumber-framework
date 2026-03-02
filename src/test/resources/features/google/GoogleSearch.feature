@@ -11,3 +11,9 @@ Feature: Google Search Functionality
     Given I open Google homepage
     When I search on Google for "Selenium WebDriver"
     Then I should see search results
+
+      @smoke @ranajit @positive
+  Scenario: Search on Google
+    Given I open Google homepage
+    When I search on Google for "Selenium WebDriver"
+    Then I should see search results
