@@ -42,11 +42,5 @@ public class XiaomiProductPage extends BasePage {
         return productTitle.isDisplayed() && productPrice.isDisplayed();
     }
 
-    public boolean isProductImageDisplayed() {
-        return productImage.isDisplayed();
-    }
-
-    public boolean isAddToCartButtonDisplayed() {
-        return addToCartButton.isDisplayed();
-    }
+ 
 }
