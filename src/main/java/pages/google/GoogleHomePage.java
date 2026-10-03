@@ -10,7 +10,7 @@ public class GoogleHomePage extends BasePage {
     @FindBy(name = "q")
     private WebElement searchBox;
 
-    @FindBy(name = "btnK")
+    @FindBy(name = "btnKk")
     private WebElement searchButton;
 
     @FindBy(xpath = "//input[@value='Google Search']")
